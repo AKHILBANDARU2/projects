@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sender Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sender Page</h1>
+    <p>Upload and send your file:</p>
+    <input type="file" id="fileInput" class="file-input">
+    <button id="sendBtn" class="btn sender-btn">Send File</button>
+  </div>
+
+  <script >
+    document.getElementById('sendBtn').addEventListener('click', () => {
+  const fileInput = document.getElementById('fileInput');
+  const file = fileInput.files[0];
+//   if (file) {
+//     alert(File ,"${file.name}", sent ,successfully!);
+//     // Add logic to send the file to the receiver (e.g., using WebSockets or APIs)
+//   } else {
+//     alert('Please select a file to send.');
+//   }
+});
+  </script>
+  <style>
+    /* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sender-btn {
+  background: #ff6f61;
+  color: #fff;
+}
+
+.receiver-btn {
+  background: #6b5b95;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+  </style>
+</body>
+</html>

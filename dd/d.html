@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Sharing Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>welcome to  </h1> 
+    <p>Choose your role:</p>
+    <div class="button-container">
+      <button id="senderBtn" class="btn sender-btn">Sender</button>
+      <button id="receiverBtn" class="btn receiver-btn">Receiver</button>
+    </div>
+  </div>
+<style>
+    /* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sender-btn {
+  background: #ff6f61;
+  color: #fff;
+}
+
+.receiver-btn {
+  background: #6b5b95;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+</style>
+  <script >
+    // Redirect to Sender Page
+document.getElementById('senderBtn').addEventListener('click', () => {
+  window.location.href = 'sender.html';
+});
+
+// Redirect to Receiver Page
+document.getElementById('receiverBtn').addEventListener('click', () => {
+  window.location.href = 'receiver.html';
+});
+  </script>
+</body>
+</html>
